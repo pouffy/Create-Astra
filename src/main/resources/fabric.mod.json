@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "create_astra",
   "version": "${version}",
-  "name": "Example Mod",
+  "name": "Rotae Ex Astris",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -11,15 +11,15 @@
     "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
   },
   "license": "CC0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/create_astra/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.modid.ExampleMod"
+      "com.pouffy.create_astra.CreateAstra"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "create_astra.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
