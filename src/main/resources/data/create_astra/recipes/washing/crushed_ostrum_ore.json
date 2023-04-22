@@ -1,0 +1,18 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "create_astra:crushed_ostrum_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:ostrum_nugget",
+      "count": 9
+    },
+    {
+      "item": "create:powdered_obsidian",
+      "chance": 0.5
+    }
+  ]
+}

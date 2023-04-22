@@ -52,6 +52,7 @@ dependencies {
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}")
 
 	// Create - dependencies are added transitively
+	modImplementation("com.tterrag.registrate_fabric:Registrate:MC${project.minecraft_version}-${project.registrate_version}")
 	modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 	modImplementation "curse.maven:ad_astra-635042:4466614"
 	modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.62") {
@@ -130,5 +131,32 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+	}
+}
+loom {
+	//accessWidenerPath = file("src/main/resources/create.accesswidener")
+	sourceSets {
+		main {
+			resources {
+				srcDir("src/generated/resources")
+				exclude("src/generated/resources/.cache")
+			}
+		}
+	}
+
+	runs {
+		datagen {
+			client()
+
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/generated/resources")}"
+			vmArg "-Dfabric-api.datagen.modid=create_astra"
+			vmArg "-Dporting_lib.datagen.existing_resources=${file("src/main/resources")}"
+		}
+
+		server {
+			runDir "run/server"
+		}
 	}
 }

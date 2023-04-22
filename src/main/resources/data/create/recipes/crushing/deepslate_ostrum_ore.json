@@ -1,0 +1,25 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "ad_astra:deepslate_ostrum_ore"
+        }
+    ],
+    "results": [
+        {
+            "item": "create_astra:crushed_ostrum_ore",
+            "count": 2
+        },
+        {
+            "item": "create_astra:crushed_ostrum_ore",
+            "count": 1,
+            "chance": 0.25
+        },
+        {
+            "item": "minecraft:deepslate",
+            "count": 1,
+            "chance": 0.125
+        }
+    ],
+    "processingTime": 300
+}

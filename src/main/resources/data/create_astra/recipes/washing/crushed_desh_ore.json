@@ -1,0 +1,18 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "create_astra:crushed_desh_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:desh_nugget",
+      "count": 9
+    },
+    {
+      "item": "ad_astra:cheese",
+      "chance": 0.25
+    }
+  ]
+}

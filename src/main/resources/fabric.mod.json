@@ -16,6 +16,9 @@
   "entrypoints": {
     "main": [
       "com.pouffy.create_astra.CreateAstra"
+    ],
+    "fabric-datagen": [
+      "com.pouffy.create_astra.CreateAstraData"
     ]
   },
   "mixins": [

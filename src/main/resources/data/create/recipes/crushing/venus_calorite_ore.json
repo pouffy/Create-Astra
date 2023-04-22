@@ -1,0 +1,25 @@
+{
+    "type": "create:crushing",
+    "ingredients": [
+        {
+            "item": "ad_astra:venus_calorite_ore"
+        }
+    ],
+    "results": [
+        {
+            "item": "create_astra:crushed_calorite_ore",
+            "count": 1
+        },
+        {
+            "item": "create_astra:crushed_calorite_ore",
+            "count": 1,
+            "chance": 0.25
+        },
+        {
+            "item": "ad_astra:venus_stone",
+            "count": 1,
+            "chance": 0.125
+        }
+    ],
+    "processingTime": 300
+}

@@ -1,0 +1,18 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "create_astra:crushed_calorite_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:calorite_nugget",
+      "count": 9
+    },
+    {
+      "item": "create:cinder_flour",
+      "chance": 0.75
+    }
+  ]
+}
