@@ -6,7 +6,7 @@ import com.jozufozu.flywheel.core.Materials;
 import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
 import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
-import com.pouffy.create_astra.foundation.util.BlockPartials;
+import com.pouffy.create_astra.foundation.util.AstraBlockPartials;
 import com.simibubi.create.content.contraptions.relays.encased.ShaftInstance;
 import com.simibubi.create.foundation.utility.AngleHelper;
 import com.simibubi.create.foundation.utility.AnimationTickHolder;
@@ -21,7 +21,7 @@ public class HeavyPressInstance extends ShaftInstance implements DynamicInstance
 
 		pressHead = dispatcher.defaultSolid()
 				.material(Materials.ORIENTED)
-				.getModel(BlockPartials.MECHANICAL_PRESS_HEAD, blockState)
+				.getModel(AstraBlockPartials.MECHANICAL_PRESS_HEAD, blockState)
 				.createInstance();
 
 		Quaternion q = Vector3f.YP

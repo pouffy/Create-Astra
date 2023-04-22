@@ -3,7 +3,7 @@ package com.pouffy.create_astra.foundation.util;
 import com.jozufozu.flywheel.core.PartialModel;
 import com.pouffy.create_astra.CreateAstra;
 
-public class BlockPartials {
+public class AstraBlockPartials {
 	public static final PartialModel
 			MECHANICAL_PRESS_HEAD = block("heavy_press/head")
 			;

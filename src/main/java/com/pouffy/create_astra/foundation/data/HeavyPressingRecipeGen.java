@@ -8,7 +8,11 @@ import net.minecraft.world.item.Items;
 
 public class HeavyPressingRecipeGen extends AstaRecipeGen {
 	GeneratedRecipe
-			IRON_PLATE = create(() -> Items.IRON_INGOT, b -> b.output(ModItems.IRON_PLATE))
+			IRON_PLATE = create(() -> Items.IRON_INGOT, b -> b.output(ModItems.IRON_PLATE)),
+	        STEEL_PLATE = create(() -> ModItems.STEEL_INGOT, b -> b.output(ModItems.COMPRESSED_STEEL)),
+			OSTRUM_PLATE = create(() -> ModItems.OSTRUM_INGOT, b -> b.output(ModItems.COMPRESSED_OSTRUM)),
+	        CALORITE_PLATE = create(() -> ModItems.CALORITE_INGOT, b -> b.output(ModItems.COMPRESSED_CALORITE)),
+	        DESH_PLATE = create(() -> ModItems.DESH_INGOT, b -> b.output(ModItems.COMPRESSED_DESH))
 			;
 	public HeavyPressingRecipeGen(FabricDataGenerator p_i48262_1_) {
 		super(p_i48262_1_);

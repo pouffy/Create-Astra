@@ -1,11 +1,9 @@
 {
   "type": "create_astra:heavy_pressing",
   "ingredients": [
-    [
-      {
-        "item": "minecraft:iron_ingot"
-      }
-    ]
+    {
+      "item": "minecraft:iron_ingot"
+    }
   ],
   "results": [
     {

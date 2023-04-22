@@ -3,7 +3,7 @@ package com.pouffy.create_astra.compat.recipe_viewers.animations;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import com.pouffy.create_astra.foundation.registry.BlockRegistry;
-import com.pouffy.create_astra.foundation.util.BlockPartials;
+import com.pouffy.create_astra.foundation.util.AstraBlockPartials;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.compat.jei.category.animations.AnimatedKinetics;
 import com.simibubi.create.foundation.utility.AnimationTickHolder;
@@ -35,7 +35,7 @@ public class JEIAnimatedHeavyPress extends AnimatedKinetics {
 				.scale(scale)
 				.render(matrixStack);
 
-		blockElement(BlockPartials.MECHANICAL_PRESS_HEAD)
+		blockElement(AstraBlockPartials.MECHANICAL_PRESS_HEAD)
 				.atLocal(0, -getAnimatedHeadOffset(), 0)
 				.scale(scale)
 				.render(matrixStack);

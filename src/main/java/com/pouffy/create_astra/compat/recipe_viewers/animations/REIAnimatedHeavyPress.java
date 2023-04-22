@@ -1,7 +1,7 @@
 package com.pouffy.create_astra.compat.recipe_viewers.animations;
 
 import com.pouffy.create_astra.foundation.registry.BlockRegistry;
-import com.pouffy.create_astra.foundation.util.BlockPartials;
+import com.pouffy.create_astra.foundation.util.AstraBlockPartials;
 import com.simibubi.create.compat.rei.category.animations.AnimatedKinetics;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
@@ -34,7 +34,7 @@ public class REIAnimatedHeavyPress extends AnimatedKinetics {
 				.scale(scale)
 				.render(matrixStack);
 
-		blockElement(BlockPartials.MECHANICAL_PRESS_HEAD)
+		blockElement(AstraBlockPartials.MECHANICAL_PRESS_HEAD)
 				.atLocal(0, -getAnimatedHeadOffset(), 0)
 				.scale(scale)
 				.render(matrixStack);

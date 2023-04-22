@@ -1,0 +1,23 @@
+{
+
+	"_": "->------------------------]  Game Elements  [------------------------<-",
+
+	"block.create_astra.desh_casing": "Desh Casing",
+	"block.create_astra.heavy_press": "Heavy Press",
+
+	"item.create_astra.crushed_calorite_ore": "Crushed Calorite Ore",
+	"item.create_astra.crushed_desh_ore": "Crushed Desh Ore",
+	"item.create_astra.crushed_ostrum_ore": "Crushed Ostrum Ore",
+
+
+	"_": "->------------------------]  UI & Messages  [------------------------<-",
+
+	"itemGroup.create_astra.main": "Rotae Ex Astris",
+
+
+	"_": "->------------------------]  Item Descriptions  [------------------------<-",
+
+
+	"_": "Thank you for translating Rotae Ex Astris!"
+
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "create_astra:heavy_press"
+    "create_astra:heavy_press",
+    "create_astra:desh_casing"
   ]
 }

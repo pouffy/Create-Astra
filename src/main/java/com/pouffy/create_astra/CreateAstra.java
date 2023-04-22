@@ -5,6 +5,9 @@ import com.pouffy.create_astra.foundation.registry.BlockRegistry;
 import com.pouffy.create_astra.foundation.registry.RecipeRegistry;
 import com.pouffy.create_astra.foundation.registry.TileEntityRegistry;
 
+import com.pouffy.create_astra.foundation.util.AstraLangPartials;
+import com.simibubi.create.foundation.data.LangMerger;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +42,7 @@ public class CreateAstra implements ModInitializer {
 	}
 	public static void gatherData(FabricDataGenerator gen, ExistingFileHelper helper) {
 		AstaRecipeGen.registerAll(gen);
+		gen.addProvider(new LangMerger(gen, ID, "Rotae Ex Astris", AstraLangPartials.values()));
 	}
 	public static ResourceLocation asResource(String path) {
 		return new ResourceLocation(ID, path);

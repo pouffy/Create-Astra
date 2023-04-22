@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "create_astra:item/crushed_desh_ore"
+    "layer0": "create_astra:item/crushed_ostrum_ore"
   }
 }

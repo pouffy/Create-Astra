@@ -27,6 +27,7 @@ public abstract class AstaRecipeGen extends CreateRecipeProvider {
 	protected static final List<AstaRecipeGen> GENERATORS = new ArrayList<>();
 	public static void registerAll(FabricDataGenerator gen) {
 		GENERATORS.add(new HeavyPressingRecipeGen(gen));
+		GENERATORS.add(new HeavyCompactingRecipeGen(gen));
 		gen.addProvider(new DataProvider() {
 
 			@Override

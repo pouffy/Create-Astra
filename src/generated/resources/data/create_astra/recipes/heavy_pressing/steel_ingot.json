@@ -1,0 +1,13 @@
+{
+  "type": "create_astra:heavy_pressing",
+  "ingredients": [
+    {
+      "item": "ad_astra:steel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:steel_plate"
+    }
+  ]
+}
