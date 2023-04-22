@@ -12,7 +12,7 @@ public class TileEntityRegistry {
 	public static final BlockEntityEntry<HeavyPressBlockEntity> MECHANICAL_PRESS = REGISTRATE
 			.tileEntity("heavy_press", HeavyPressBlockEntity::new)
 			.instance(() -> HeavyPressInstance::new)
-			.validBlocks(AllBlocks.MECHANICAL_PRESS)
+			.validBlocks(BlockRegistry.HEAVY_PRESS)
 			.renderer(() -> HeavyPressRenderer::new)
 			.register();
 

@@ -3,6 +3,7 @@ package com.pouffy.create_astra.content.contraptions.heavy_press;
 import java.util.List;
 import java.util.Optional;
 
+import com.pouffy.create_astra.foundation.registry.RecipeRegistry;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.Create;
@@ -181,12 +182,12 @@ public class HeavyPressBlockEntity extends BasinOperatingTileEntity implements H
 
 	public Optional<HeavyPressingRecipe> getRecipe(ItemStack item) {
 		Optional<HeavyPressingRecipe> assemblyRecipe =
-				SequencedAssemblyRecipe.getRecipe(level, item, AllRecipeTypes.PRESSING.getType(), HeavyPressingRecipe.class);
+				SequencedAssemblyRecipe.getRecipe(level, item, RecipeRegistry.HEAVY_PRESSING.getType(), HeavyPressingRecipe.class);
 		if (assemblyRecipe.isPresent())
 			return assemblyRecipe;
 
 		pressingInv.setItem(0, item);
-		return AllRecipeTypes.PRESSING.find(pressingInv, level);
+		return RecipeRegistry.HEAVY_PRESSING.find(pressingInv, level);
 	}
 
 	public static <C extends Container> boolean canCompress(Recipe<C> recipe) {
@@ -200,7 +201,7 @@ public class HeavyPressBlockEntity extends BasinOperatingTileEntity implements H
 	protected <C extends Container> boolean matchStaticFilters(Recipe<C> recipe) {
 		return (recipe instanceof CraftingRecipe && !(recipe instanceof MechanicalCraftingRecipe) && canCompress(recipe)
 				&& !AllRecipeTypes.shouldIgnoreInAutomation(recipe))
-				|| recipe.getType() == AllRecipeTypes.COMPACTING.getType();
+				|| recipe.getType() == RecipeRegistry.HEAVY_COMPACTING.getType();
 	}
 
 	@Override

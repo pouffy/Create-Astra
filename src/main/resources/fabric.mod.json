@@ -5,10 +5,10 @@
   "name": "Rotae Ex Astris",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "PouffyDev"
   ],
   "contact": {
-    "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
+    "sources": "https://github.com/pouffy/Create-Astra"
   },
   "license": "CC0",
   "icon": "assets/create_astra/icon.png",
@@ -17,8 +17,17 @@
     "main": [
       "com.pouffy.create_astra.CreateAstra"
     ],
+    "client": [
+      "com.pouffy.create_astra.CreateAstraClient"
+    ],
     "fabric-datagen": [
       "com.pouffy.create_astra.CreateAstraData"
+    ],
+    "rei_client": [
+      "com.pouffy.create_astra.compat.rei.CreateAstraREI"
+    ],
+    "jei_mod_plugin": [
+      "com.pouffy.create_astra.compat.jei.CreateAstraJEI"
     ]
   },
   "mixins": [

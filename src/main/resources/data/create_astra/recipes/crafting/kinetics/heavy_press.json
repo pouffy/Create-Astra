@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PEP",
+    "DMD",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "ad_astra:steel_plate"
+    },
+    "P": {
+      "item": "ad_astra:desh_plate"
+    },
+    "E": {
+      "item": "ad_astra:steel_engine"
+    },
+    "D": {
+      "item": "ad_astra:desh_ingot"
+    },
+    "M": {
+      "item": "create:mechanical_press"
+    }
+  },
+  "result": {
+    "item": "create_astra:heavy_press"
+  }
+}

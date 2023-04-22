@@ -2,5 +2,6 @@
   "itemGroup.create_astra.main": "Rotae Ex Astris",
   "item.create_astra.crushed_desh_ore": "Crushed Desh Ore",
   "item.create_astra.crushed_calorite_ore": "Crushed Calorite Ore",
-  "item.create_astra.crushed_ostrum_ore": "Crushed Ostrum Ore"
+  "item.create_astra.crushed_ostrum_ore": "Crushed Ostrum Ore",
+  "block.create_astra.heavy_press": "Heavy Press"
 }
