@@ -4,7 +4,6 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 
 import com.jozufozu.flywheel.backend.instancing.InstancedRenderDispatcher;
-import com.pouffy.create_astra.content.logistics.funnel.AstraFunnelFlapPacket;
 import com.pouffy.create_astra.foundation.registry.BlockRegistry;
 import com.pouffy.create_astra.foundation.registry.PacketRegistry;
 import com.simibubi.create.AllBlocks;

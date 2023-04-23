@@ -3,7 +3,6 @@ package com.pouffy.create_astra.content.logistics.funnel.desh;
 import com.pouffy.create_astra.content.logistics.funnel.AstraBeltFunnelBlock;
 import com.pouffy.create_astra.content.logistics.funnel.AstraFunnelBlock;
 import com.pouffy.create_astra.foundation.registry.BlockRegistry;
-import com.simibubi.create.content.logistics.block.funnel.BeltFunnelBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

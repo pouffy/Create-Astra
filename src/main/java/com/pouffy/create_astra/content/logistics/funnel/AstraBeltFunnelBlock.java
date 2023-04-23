@@ -43,7 +43,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 
 	private BlockEntry<? extends AstraFunnelBlock> parent;
 
-	public static final EnumProperty<AstraBeltFunnelBlock.Shape> SHAPE = EnumProperty.create("shape", AstraBeltFunnelBlock.Shape.class);
+	public static final EnumProperty<Shape> SHAPE = EnumProperty.create("shape", Shape.class);
 
 	public enum Shape implements StringRepresentable {
 		RETRACTED(AllShapes.BELT_FUNNEL_RETRACTED),
@@ -53,7 +53,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 
 		VoxelShaper shaper;
 
-		private Shape(VoxelShaper shaper) {
+		Shape(VoxelShaper shaper) {
 			this.shaper = shaper;
 		}
 
@@ -66,7 +66,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 	public AstraBeltFunnelBlock(BlockEntry<? extends AstraFunnelBlock> parent, Properties p_i48377_1_) {
 		super(p_i48377_1_);
 		this.parent = parent;
-		registerDefaultState(defaultBlockState().setValue(SHAPE, AstraBeltFunnelBlock.Shape.RETRACTED));
+		registerDefaultState(defaultBlockState().setValue(SHAPE, Shape.RETRACTED));
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 										CollisionContext p_220071_4_) {
 		if (p_220071_4_ instanceof EntityCollisionContext
 				&& ((EntityCollisionContext) p_220071_4_).getEntity() instanceof ItemEntity
-				&& (p_220071_1_.getValue(SHAPE) == AstraBeltFunnelBlock.Shape.PULLING || p_220071_1_.getValue(SHAPE) == AstraBeltFunnelBlock.Shape.PUSHING))
+				&& (p_220071_1_.getValue(SHAPE) == Shape.PULLING || p_220071_1_.getValue(SHAPE) == Shape.PUSHING))
 			return AllShapes.FUNNEL_COLLISION.get(getFacing(p_220071_1_));
 		return getShape(p_220071_1_, p_220071_2_, p_220071_3_, p_220071_4_);
 	}
@@ -105,14 +105,14 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 		return state.setValue(SHAPE, getShapeForPosition(world, pos, facing, !sneaking));
 	}
 
-	public static AstraBeltFunnelBlock.Shape getShapeForPosition(BlockGetter world, BlockPos pos, Direction facing, boolean extracting) {
+	public static Shape getShapeForPosition(BlockGetter world, BlockPos pos, Direction facing, boolean extracting) {
 		BlockPos posBelow = pos.below();
 		BlockState stateBelow = world.getBlockState(posBelow);
-		AstraBeltFunnelBlock.Shape perpendicularState = extracting ? AstraBeltFunnelBlock.Shape.PUSHING : AstraBeltFunnelBlock.Shape.PULLING;
+		Shape perpendicularState = extracting ? Shape.PUSHING : Shape.PULLING;
 		if (!AllBlocks.BELT.has(stateBelow))
 			return perpendicularState;
 		Direction movementFacing = stateBelow.getValue(BeltBlock.HORIZONTAL_FACING);
-		return movementFacing.getAxis() != facing.getAxis() ? perpendicularState : AstraBeltFunnelBlock.Shape.RETRACTED;
+		return movementFacing.getAxis() != facing.getAxis() ? perpendicularState : Shape.RETRACTED;
 	}
 
 	@Override
@@ -128,20 +128,20 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 			if (state.getOptionalValue(POWERED)
 					.orElse(false))
 				parentState = parentState.setValue(POWERED, true);
-			if (state.getValue(SHAPE) == AstraBeltFunnelBlock.Shape.PUSHING)
+			if (state.getValue(SHAPE) == Shape.PUSHING)
 				parentState = parentState.setValue(AstraFunnelBlock.EXTRACTING, true);
 			return parentState.setValue(AstraFunnelBlock.FACING, state.getValue(HORIZONTAL_FACING));
 		}
-		AstraBeltFunnelBlock.Shape updatedShape =
-				getShapeForPosition(world, pos, state.getValue(HORIZONTAL_FACING), state.getValue(SHAPE) == AstraBeltFunnelBlock.Shape.PUSHING);
-		AstraBeltFunnelBlock.Shape currentShape = state.getValue(SHAPE);
+		Shape updatedShape =
+				getShapeForPosition(world, pos, state.getValue(HORIZONTAL_FACING), state.getValue(SHAPE) == Shape.PUSHING);
+		Shape currentShape = state.getValue(SHAPE);
 		if (updatedShape == currentShape)
 			return state;
 
 		// Don't revert wrenched states
-		if (updatedShape == AstraBeltFunnelBlock.Shape.PUSHING && currentShape == AstraBeltFunnelBlock.Shape.PULLING)
+		if (updatedShape == Shape.PUSHING && currentShape == Shape.PULLING)
 			return state;
-		if (updatedShape == AstraBeltFunnelBlock.Shape.RETRACTED && currentShape == AstraBeltFunnelBlock.Shape.EXTENDED)
+		if (updatedShape == Shape.RETRACTED && currentShape == Shape.EXTENDED)
 			return state;
 
 		return state.setValue(SHAPE, updatedShape);
@@ -164,21 +164,21 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 		if (world.isClientSide)
 			return InteractionResult.SUCCESS;
 
-		AstraBeltFunnelBlock.Shape shape = state.getValue(SHAPE);
-		AstraBeltFunnelBlock.Shape newShape = shape;
-		if (shape == AstraBeltFunnelBlock.Shape.PULLING)
-			newShape = AstraBeltFunnelBlock.Shape.PUSHING;
-		else if (shape == AstraBeltFunnelBlock.Shape.PUSHING)
-			newShape = AstraBeltFunnelBlock.Shape.PULLING;
-		else if (shape == AstraBeltFunnelBlock.Shape.EXTENDED)
-			newShape = AstraBeltFunnelBlock.Shape.RETRACTED;
-		else if (shape == AstraBeltFunnelBlock.Shape.RETRACTED) {
+		Shape shape = state.getValue(SHAPE);
+		Shape newShape = shape;
+		if (shape == Shape.PULLING)
+			newShape = Shape.PUSHING;
+		else if (shape == Shape.PUSHING)
+			newShape = Shape.PULLING;
+		else if (shape == Shape.EXTENDED)
+			newShape = Shape.RETRACTED;
+		else if (shape == Shape.RETRACTED) {
 			BlockState belt = world.getBlockState(context.getClickedPos()
 					.below());
 			if (belt.getBlock() instanceof BeltBlock && belt.getValue(BeltBlock.SLOPE) != BeltSlope.HORIZONTAL)
-				newShape = AstraBeltFunnelBlock.Shape.RETRACTED;
+				newShape = Shape.RETRACTED;
 			else
-				newShape = AstraBeltFunnelBlock.Shape.EXTENDED;
+				newShape = Shape.EXTENDED;
 		}
 
 		if (newShape == shape)
@@ -186,11 +186,11 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 
 		world.setBlockAndUpdate(context.getClickedPos(), state.setValue(SHAPE, newShape));
 
-		if (newShape == AstraBeltFunnelBlock.Shape.EXTENDED) {
+		if (newShape == Shape.EXTENDED) {
 			Direction facing = state.getValue(HORIZONTAL_FACING);
 			BlockState opposite = world.getBlockState(context.getClickedPos()
 					.relative(facing));
-			if (opposite.getBlock() instanceof AstraBeltFunnelBlock && opposite.getValue(SHAPE) == AstraBeltFunnelBlock.Shape.EXTENDED
+			if (opposite.getBlock() instanceof AstraBeltFunnelBlock && opposite.getValue(SHAPE) == Shape.EXTENDED
 					&& opposite.getValue(HORIZONTAL_FACING) == facing.getOpposite())
 				AllAdvancements.FUNNEL_KISS.awardTo(context.getPlayer());
 		}
