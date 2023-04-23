@@ -4,6 +4,7 @@ import com.pouffy.create_astra.foundation.registry.TileEntityRegistry;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.base.HorizontalKineticBlock;
+import com.simibubi.create.content.contraptions.base.IRotate;
 import com.simibubi.create.foundation.block.ITE;
 
 import net.minecraft.core.BlockPos;
@@ -44,6 +45,9 @@ public class HeavyPressBlock extends HorizontalKineticBlock implements ITE<Heavy
 		if (prefferedSide != null)
 			return defaultBlockState().setValue(HORIZONTAL_FACING, prefferedSide);
 		return super.getStateForPlacement(context);
+	}
+	public IRotate.SpeedLevel getMinimumRequiredSpeedLevel() {
+		return SpeedLevel.FAST;
 	}
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {

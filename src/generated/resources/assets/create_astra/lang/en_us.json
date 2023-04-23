@@ -2,7 +2,9 @@
 
 	"_": "->------------------------]  Game Elements  [------------------------<-",
 
+	"block.create_astra.desh_belt_funnel": "Desh Belt Funnel",
 	"block.create_astra.desh_casing": "Desh Casing",
+	"block.create_astra.desh_funnel": "Desh Funnel",
 	"block.create_astra.heavy_press": "Heavy Press",
 
 	"item.create_astra.crushed_calorite_ore": "Crushed Calorite Ore",

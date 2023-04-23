@@ -1,0 +1,38 @@
+{
+  "type": "create_astra:heavy_compacting",
+  "ingredients": [
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:iron_plating"
+    },
+    {
+      "item": "ad_astra:calorite_plate"
+    }
+  ],
+  "results": [
+    {
+      "item": "ad_astra:calorite_plating",
+      "count": 8
+    }
+  ]
+}

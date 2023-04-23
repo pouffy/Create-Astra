@@ -1,0 +1,13 @@
+{
+  "parent": "create_astra:block/funnel/block_vertical",
+  "textures": {
+    "particle": "create_astra:block/desh_casing",
+    "7": "create_astra:block/desh_funnel_plating",
+    "5": "create_astra:block/desh_funnel_tall",
+    "2_2": "create_astra:block/desh_funnel_push",
+    "3": "create_astra:block/desh_funnel_back",
+    "8": "create_astra:block/desh_casing",
+    "9": "create_astra:block/desh_funnel_slope",
+    "10": "create_astra:block/funnel_open"
+  }
+}

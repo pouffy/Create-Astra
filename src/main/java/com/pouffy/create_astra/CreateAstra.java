@@ -1,7 +1,9 @@
 package com.pouffy.create_astra;
 
+import com.github.alexnijjar.ad_astra.AdAstra;
 import com.pouffy.create_astra.foundation.data.AstaRecipeGen;
 import com.pouffy.create_astra.foundation.registry.BlockRegistry;
+import com.pouffy.create_astra.foundation.registry.PacketRegistry;
 import com.pouffy.create_astra.foundation.registry.RecipeRegistry;
 import com.pouffy.create_astra.foundation.registry.TileEntityRegistry;
 
@@ -20,6 +22,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
+
 @SuppressWarnings("removal")
 public class CreateAstra implements ModInitializer {
 	public static final String ID = "create_astra";
@@ -38,6 +41,8 @@ public class CreateAstra implements ModInitializer {
 		TileEntityRegistry.register();
 		BlockRegistry.register();
 		RecipeRegistry.register();
+		PacketRegistry.registerPackets();
+		PacketRegistry.channel.initServerListener();
 		REGISTRATE.register();
 	}
 	public static void gatherData(FabricDataGenerator gen, ExistingFileHelper helper) {
@@ -46,6 +51,9 @@ public class CreateAstra implements ModInitializer {
 	}
 	public static ResourceLocation asResource(String path) {
 		return new ResourceLocation(ID, path);
+	}
+	public static ResourceLocation asAdAstraResource(String path) {
+		return new ResourceLocation(AdAstra.MOD_ID, path);
 	}
 	public static CreateRegistrate registrate() {
 		return REGISTRATE;
