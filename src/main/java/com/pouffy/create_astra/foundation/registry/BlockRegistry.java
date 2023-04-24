@@ -49,6 +49,16 @@ public class BlockRegistry {
 			.transform(BuilderTransformers.casing(() -> AstraSpriteShifts.DESH_CASING))
 			.properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
 			.register();
+	public static final BlockEntry<CasingBlock> CALORITE_CASING = REGISTRATE.block("calorite_casing", CasingBlock::new)
+			.properties(p -> p.color(MaterialColor.TERRACOTTA_RED))
+			.transform(BuilderTransformers.casing(() -> AstraSpriteShifts.CALORITE_CASING))
+			.properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
+			.register();
+	public static final BlockEntry<CasingBlock> OSTRUM_CASING = REGISTRATE.block("ostrum_casing", CasingBlock::new)
+			.properties(p -> p.color(MaterialColor.TERRACOTTA_BROWN))
+			.transform(BuilderTransformers.casing(() -> AstraSpriteShifts.OSTRUM_CASING))
+			.properties(p -> p.sound(SoundType.NETHERITE_BLOCK))
+			.register();
 	public static final BlockEntry<DeshFunnelBlock> DESH_FUNNEL =
 			REGISTRATE.block("desh_funnel", DeshFunnelBlock::new)
 					.initialProperties(SharedProperties::softMetal)

@@ -11,7 +11,8 @@ import com.simibubi.create.foundation.block.render.SpriteShifter;
 
 public class AstraSpriteShifts {
 	public static final CTSpriteShiftEntry DESH_CASING = omni("desh_casing");
-
+	public static final CTSpriteShiftEntry CALORITE_CASING = omni("calorite_casing");
+	public static final CTSpriteShiftEntry OSTRUM_CASING = omni("ostrum_casing");
 
 	private static CTSpriteShiftEntry omni(String name) {
 		return getCT(AllCTTypes.OMNIDIRECTIONAL, name);

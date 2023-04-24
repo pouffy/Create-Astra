@@ -1,18 +1,21 @@
 package com.pouffy.create_astra.content.logistics.funnel;
 
-import org.jetbrains.annotations.Nullable;
-
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.contraptions.relays.belt.BeltBlock;
 import com.simibubi.create.content.contraptions.relays.belt.BeltSlope;
 import com.simibubi.create.content.schematics.ISpecialBlockItemRequirement;
+
 import com.simibubi.create.content.schematics.ItemRequirement;
 import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.tileEntity.TileEntityBehaviour;
 import com.simibubi.create.foundation.tileEntity.behaviour.belt.DirectBeltInputBehaviour;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.foundation.utility.VoxelShaper;
+
+import org.jetbrains.annotations.Nullable;
+
+
 import com.tterrag.registrate.util.entry.BlockEntry;
 
 import net.fabricmc.fabric.api.block.BlockPickInteractionAware;
@@ -43,7 +46,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 
 	private BlockEntry<? extends AstraFunnelBlock> parent;
 
-	public static final EnumProperty<Shape> SHAPE = EnumProperty.create("shape", Shape.class);
+	public static final EnumProperty<Shape> SHAPE = EnumProperty.create("astra_shape", Shape.class);
 
 	public enum Shape implements StringRepresentable {
 		RETRACTED(AllShapes.BELT_FUNNEL_RETRACTED),
@@ -53,7 +56,7 @@ public class AstraBeltFunnelBlock extends AstraAbstractHorizontalFunnelBlock imp
 
 		VoxelShaper shaper;
 
-		Shape(VoxelShaper shaper) {
+		private Shape(VoxelShaper shaper) {
 			this.shaper = shaper;
 		}
 

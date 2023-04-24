@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "create_astra:desh_casing"
+    "create_astra:desh_casing",
+    "create_astra:calorite_casing",
+    "create_astra:ostrum_casing"
   ]
 }
