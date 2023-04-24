@@ -1,122 +1,122 @@
 {
   "variants": {
-    "facing=north,powered=false,shape=retracted": {
+    "astra_shape=retracted,facing=north,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_retracted"
     },
-    "facing=south,powered=false,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted",
-      "y": 180
-    },
-    "facing=west,powered=false,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted",
-      "y": 270
-    },
-    "facing=east,powered=false,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted",
-      "y": 90
-    },
-    "facing=north,powered=true,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted_powered"
-    },
-    "facing=south,powered=true,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
-      "y": 180
-    },
-    "facing=west,powered=true,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
-      "y": 270
-    },
-    "facing=east,powered=true,shape=retracted": {
-      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
-      "y": 90
-    },
-    "facing=north,powered=false,shape=extended": {
+    "astra_shape=extended,facing=north,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_extended"
     },
-    "facing=south,powered=false,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended",
-      "y": 180
-    },
-    "facing=west,powered=false,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended",
-      "y": 270
-    },
-    "facing=east,powered=false,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended",
-      "y": 90
-    },
-    "facing=north,powered=true,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended_powered"
-    },
-    "facing=south,powered=true,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended_powered",
-      "y": 180
-    },
-    "facing=west,powered=true,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended_powered",
-      "y": 270
-    },
-    "facing=east,powered=true,shape=extended": {
-      "model": "create_astra:block/desh_belt_funnel_extended_powered",
-      "y": 90
-    },
-    "facing=north,powered=false,shape=pushing": {
+    "astra_shape=pushing,facing=north,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_pushing"
     },
-    "facing=south,powered=false,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing",
-      "y": 180
-    },
-    "facing=west,powered=false,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing",
-      "y": 270
-    },
-    "facing=east,powered=false,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing",
-      "y": 90
-    },
-    "facing=north,powered=true,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing_powered"
-    },
-    "facing=south,powered=true,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
-      "y": 180
-    },
-    "facing=west,powered=true,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
-      "y": 270
-    },
-    "facing=east,powered=true,shape=pushing": {
-      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
-      "y": 90
-    },
-    "facing=north,powered=false,shape=pulling": {
+    "astra_shape=pulling,facing=north,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_pulling"
     },
-    "facing=south,powered=false,shape=pulling": {
+    "astra_shape=retracted,facing=south,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_retracted",
+      "y": 180
+    },
+    "astra_shape=extended,facing=south,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_extended",
+      "y": 180
+    },
+    "astra_shape=pushing,facing=south,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_pushing",
+      "y": 180
+    },
+    "astra_shape=pulling,facing=south,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_pulling",
       "y": 180
     },
-    "facing=west,powered=false,shape=pulling": {
+    "astra_shape=retracted,facing=west,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_retracted",
+      "y": 270
+    },
+    "astra_shape=extended,facing=west,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_extended",
+      "y": 270
+    },
+    "astra_shape=pushing,facing=west,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_pushing",
+      "y": 270
+    },
+    "astra_shape=pulling,facing=west,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_pulling",
       "y": 270
     },
-    "facing=east,powered=false,shape=pulling": {
+    "astra_shape=retracted,facing=east,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_retracted",
+      "y": 90
+    },
+    "astra_shape=extended,facing=east,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_extended",
+      "y": 90
+    },
+    "astra_shape=pushing,facing=east,powered=false": {
+      "model": "create_astra:block/desh_belt_funnel_pushing",
+      "y": 90
+    },
+    "astra_shape=pulling,facing=east,powered=false": {
       "model": "create_astra:block/desh_belt_funnel_pulling",
       "y": 90
     },
-    "facing=north,powered=true,shape=pulling": {
+    "astra_shape=retracted,facing=north,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_retracted_powered"
+    },
+    "astra_shape=extended,facing=north,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_extended_powered"
+    },
+    "astra_shape=pushing,facing=north,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_pushing_powered"
+    },
+    "astra_shape=pulling,facing=north,powered=true": {
       "model": "create_astra:block/desh_belt_funnel_pulling_powered"
     },
-    "facing=south,powered=true,shape=pulling": {
+    "astra_shape=retracted,facing=south,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
+      "y": 180
+    },
+    "astra_shape=extended,facing=south,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_extended_powered",
+      "y": 180
+    },
+    "astra_shape=pushing,facing=south,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
+      "y": 180
+    },
+    "astra_shape=pulling,facing=south,powered=true": {
       "model": "create_astra:block/desh_belt_funnel_pulling_powered",
       "y": 180
     },
-    "facing=west,powered=true,shape=pulling": {
+    "astra_shape=retracted,facing=west,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
+      "y": 270
+    },
+    "astra_shape=extended,facing=west,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_extended_powered",
+      "y": 270
+    },
+    "astra_shape=pushing,facing=west,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
+      "y": 270
+    },
+    "astra_shape=pulling,facing=west,powered=true": {
       "model": "create_astra:block/desh_belt_funnel_pulling_powered",
       "y": 270
     },
-    "facing=east,powered=true,shape=pulling": {
+    "astra_shape=retracted,facing=east,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_retracted_powered",
+      "y": 90
+    },
+    "astra_shape=extended,facing=east,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_extended_powered",
+      "y": 90
+    },
+    "astra_shape=pushing,facing=east,powered=true": {
+      "model": "create_astra:block/desh_belt_funnel_pushing_powered",
+      "y": 90
+    },
+    "astra_shape=pulling,facing=east,powered=true": {
       "model": "create_astra:block/desh_belt_funnel_pulling_powered",
       "y": 90
     }

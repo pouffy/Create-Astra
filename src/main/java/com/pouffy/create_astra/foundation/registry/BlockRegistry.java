@@ -12,6 +12,7 @@ import com.pouffy.create_astra.content.logistics.funnel.AstraBeltFunnelBlock;
 import com.pouffy.create_astra.content.logistics.funnel.AstraFunnelItem;
 import com.pouffy.create_astra.content.logistics.funnel.desh.DeshFunnelBlock;
 import com.pouffy.create_astra.foundation.ModGroup;
+import com.pouffy.create_astra.foundation.data.AstraBeltFunnelGenerator;
 import com.pouffy.create_astra.foundation.data.AstraFunnelGenerator;
 import com.pouffy.create_astra.foundation.util.AstraSpriteShifts;
 import com.simibubi.create.AllTags;
@@ -77,7 +78,7 @@ public class BlockRegistry {
 					.properties(p -> p.color(MaterialColor.TERRACOTTA_YELLOW))
 					.transform(pickaxeOnly())
 					.tag(AllTags.AllBlockTags.SAFE_NBT.tag)
-					.blockstate(new BeltFunnelGenerator("desh", CreateAstra.asResource("block/desh_casing"))::generate)
+					.blockstate(new AstraBeltFunnelGenerator("desh", CreateAstra.asResource("block/desh_casing"))::generate)
 					.loot((p, b) -> p.dropOther(b, DESH_FUNNEL.get()))
 					.register();
 
